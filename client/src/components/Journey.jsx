@@ -246,6 +246,95 @@ function DesktopDot({ item, index, onClick }) {
     </div>
   );
 }
+// Loader
+function JourneyLoader({ seconds }) {
+  return (
+    <div className="min-h-[60vh] flex items-center justify-center px-6">
+      <div
+        className="relative rounded-3xl border p-10 w-full max-w-md overflow-hidden"
+        style={{
+          background: "var(--bg2)",
+          borderColor: "var(--border)",
+        }}
+      >
+        {/* Glow */}
+        <div
+          className="absolute -top-20 -left-20 w-40 h-40 rounded-full blur-3xl opacity-20"
+          style={{ background: "var(--purple)" }}
+        />
+        <div
+          className="absolute -bottom-20 -right-20 w-40 h-40 rounded-full blur-3xl opacity-20"
+          style={{ background: "var(--cyan)" }}
+        />
+
+        <div className="relative z-10 text-center">
+          {/* Animated timeline dots */}
+          <div className="flex items-center justify-center gap-3 mb-8">
+            {[0, 1, 2, 3].map((i) => (
+              <div
+                key={i}
+                className="w-4 h-4 rounded-full animate-bounce"
+                style={{
+                  background:
+                    i % 2 === 0
+                      ? "var(--purple)"
+                      : "var(--cyan)",
+                  animationDelay: `${i * 0.15}s`,
+                }}
+              />
+            ))}
+          </div>
+
+          <h3
+            className="text-2xl font-bold font-display mb-2"
+            style={{ color: "var(--text)" }}
+          >
+            Loading My Journey
+          </h3>
+
+          <p
+            className="text-sm mb-5"
+            style={{ color: "var(--text2)" }}
+          >
+            Waking up the server...
+          </p>
+
+          {/* Progress bar animation */}
+          <div
+            className="h-2 rounded-full overflow-hidden mb-5"
+            style={{ background: "var(--bg3)" }}
+          >
+            <div
+              className="h-full rounded-full animate-pulse"
+              style={{
+                width: `${Math.min(seconds * 3, 90)}%`,
+                background:
+                  "linear-gradient(90deg, var(--purple), var(--pink), var(--cyan))",
+                transition: "width 1s ease",
+              }}
+            />
+          </div>
+
+          <p
+            className="text-xs font-mono"
+            style={{ color: "var(--text3)" }}
+          >
+            {seconds}s elapsed
+          </p>
+
+          {seconds > 10 && (
+            <p
+              className="text-xs mt-3"
+              style={{ color: "var(--text3)" }}
+            >
+              First load may take ~30 seconds.
+            </p>
+          )}
+        </div>
+      </div>
+    </div>
+  );
+}
 
 // ── Main ───────────────────────────────────────────────────────────────────
 export default function Journey() {
@@ -253,6 +342,18 @@ export default function Journey() {
   const [selected, setSelected] = useState(null);
   const [filter, setFilter] = useState("all");
   const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
+  const [loading, setLoading] = useState(true);
+  const [seconds, setSeconds] = useState(0);
+
+  useEffect(() => {
+  if (!loading) return;
+
+  const interval = setInterval(() => {
+    setSeconds((s) => s + 1);
+  }, 1000);
+
+  return () => clearInterval(interval);
+  }, [loading]);
 
   useEffect(() => {
     const onResize = () => setIsMobile(window.innerWidth < 768);
@@ -261,10 +362,19 @@ export default function Journey() {
   }, []);
 
   useEffect(() => {
-    axios.get(`${BASE}/api/timeline`)
-      .then(r => setItems(r.data.length ? r.data : seedData))
-      .catch(() => setItems(seedData));
-  }, []);
+  setLoading(true);
+
+  axios.get(`${BASE}/api/timeline`)
+    .then((r) => {
+      setItems(r.data.length ? r.data : seedData);
+    })
+    .catch(() => {
+      setItems(seedData);
+    })
+    .finally(() => {
+      setLoading(false);
+    });
+   }, []);
 
   const filtered = filter === "all" ? items : items.filter(i => i.type === filter);
   const sorted = [...filtered].sort((a, b) => new Date(a.date) - new Date(b.date));
@@ -298,7 +408,10 @@ export default function Journey() {
         </div>
 
         {/* Timeline */}
-        <div className="relative">
+        {loading ? (
+            <JourneyLoader seconds={seconds} />
+          ) : (
+            <div className="relative">
           {/* Vertical line */}
           <div
             className="absolute top-0 bottom-0 w-0.5 rounded-full"
@@ -314,7 +427,8 @@ export default function Journey() {
               ? <MobileDot key={item._id || i} item={item} index={i} onClick={setSelected} />
               : <DesktopDot key={item._id || i} item={item} index={i} onClick={setSelected} />
           )}
-        </div>
+        </div>)}
+
       </div>
 
       {selected && <TimelineModal item={selected} onClose={() => setSelected(null)} />}
