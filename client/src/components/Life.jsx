@@ -8,7 +8,7 @@ const interests = [
     desc: "I create digital and traditional art. Drawing is how I process the world — every sketch is a thought made visible.",
     color: "var(--pink)",
     items: ["Digital illustration", "Sketching", "Color theory", "Visual storytelling"],
-    link: "https://www.instagram.com/project.magic.palette/"
+    link: "https://www.instagram.com/the.magic.palette.studio/"
   },
   {
     Icon: Music,
@@ -24,7 +24,7 @@ const interests = [
     desc: "I write about tech, emotions, creativity, human mind and about lot more.",
     color: "var(--cyan)",
     items: ["Tech blogging", "Medium stories", "Developer diaries", "Lessons learned"],
-    link: "https://medium.com",
+    link: "https://medium.com/@vidyatandel",
   },
   {
     Icon: BookOpen,
