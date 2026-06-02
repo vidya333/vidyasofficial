@@ -1,6 +1,6 @@
 import React, { useEffect, useRef } from "react";
 
-const ROLES = ["MERN Stack Developer", "Freelance Web Dev", "Artist & Guitarist", "The Quiet Coder"];
+const ROLES = ["MERN Stack Developer", "Freelance Web Dev", "Guitarist & Artist", "Quiet Coder"];
 
 const socials = [
   { label: "LinkedIn", url: "https://linkedin.com/in/vidya333" },

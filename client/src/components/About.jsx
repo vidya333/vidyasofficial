@@ -12,8 +12,8 @@ const pillars = [
 
 const stats = [
   { num: "2+", label: "Years learning" },
-  { num: "6+", label: "Projects shipped" },
-  { num: "1", label: "Freelance client" },
+  { num: "6+", label: "Powerful Projects" },
+  { num: "1+", label: "Freelance client" },
   { num: "∞", label: "Things to build" },
 ];
 

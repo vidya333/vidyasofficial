@@ -43,7 +43,7 @@ export default function Footer() {
               onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
             >
               <span style={{ color: "var(--pink)" }}>vidyas</span>
-              <span style={{ color: "var(--purple)" }}>officiall</span>
+              <span style={{ color: "var(--purple)" }}>official</span>
             </span>
             <p className="text-xs font-mono mt-2 mb-4" style={{ color: "var(--text3)" }}>
               Dream. Draw. Develop.
@@ -137,7 +137,7 @@ export default function Footer() {
         {/* Bottom row */}
         <div className="flex flex-col items-center gap-3 sm:flex-row sm:justify-between">
             <p className="text-xs font-mono flex items-center gap-1.5 text-center" style={{ color: "var(--text3)" }}>
-              © 2026 vidyasofficiall. Built with
+              © 2026 vidyasofficial. Built with
               <Heart size={11} strokeWidth={2} style={{ color: "var(--pink)" }} />
               React & Node.js
             </p>
