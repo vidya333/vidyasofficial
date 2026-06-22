@@ -6,7 +6,7 @@ const testimonials = [
     Icon: Building2,
     name: "VM Prosperity Group",
     role: "Freelance Client",
-    text: "Vidya built our business website with professionalism and creativity. The result exceeded our expectations — modern, fast, and exactly what we envisioned.",
+    text: "Vidya built our business website with professionalism and creativity. The result exceeded our expectations - modern, fast, and exactly what we envisioned.",
     color: "var(--cyan)",
   },
   {
@@ -20,7 +20,7 @@ const testimonials = [
     Icon: Users,
     name: "Dev Community",
     role: "LinkedIn Follower",
-    text: "Love following Vidya's journey — authentic posts, real projects, and a genuine passion for learning. DevPulse is one of the coolest portfolio projects I've seen.",
+    text: "Love following Vidya's journey - authentic posts, real projects, and a genuine passion for learning. DevPulse is one of the coolest portfolio projects I've seen.",
     color: "var(--pink)",
   },
 ];

@@ -73,8 +73,8 @@ export default function Navbar() {
           {/* Resume — desktop only */}
           {!isMobile && (
             <a
-              href="/resume.pdf"
-              download
+              href="https://drive.google.com/file/d/1m5kwW99zgOIpcmqko3vfcSRo0z3Gk3Qe/view"
+              download target="blank"
               className="flex items-center gap-1.5 px-4 py-2 rounded-lg text-white text-[13px]
                 font-bold no-underline font-display
                 bg-gradient-to-br from-[var(--purple)] to-[var(--pink)]
