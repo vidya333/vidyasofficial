@@ -17,6 +17,7 @@ const services = [
     desc: "Professional websites your customers can find, trust, and act on. Fast, mobile-first, built to rank.",
     color: "var(--orange)",
     from: "₹8,000",
+    image: "/landingpage.png"
   },
   {
     Icon: Globe,
@@ -24,6 +25,7 @@ const services = [
     desc: "Custom web apps with login, dashboards, databases - built end to end for startups and growing businesses.",
     color: "var(--purple)",
     from: "₹20,000",
+    image: "/fullstack.png"
   },
   {
     Icon: Palette,
@@ -31,6 +33,7 @@ const services = [
     desc: "Interfaces that look intentional and feel effortless. Clean, creative, and user-focused from the first screen.",
     color: "var(--pink)",
     from: "₹6,000",
+    image: "/uiux.png"
   },
   {
     Icon: Bot,
@@ -38,6 +41,7 @@ const services = [
     desc: "Add AI to your product - chatbots, content tools, smart dashboards powered by modern LLM APIs.",
     color: "var(--cyan)",
     from: "₹15,000",
+    image:"/aiintegration.png"
   },
   {
     Icon: Server,
@@ -45,6 +49,7 @@ const services = [
     desc: "Domain setup, deployment, SSL, and ongoing updates. Your site stays live and secure without you worrying.",
     color: "var(--green)",
     from: "₹1,500/mo",
+    image:"/hosting.png"
   },
   {
   Icon: RefreshCw,
@@ -52,6 +57,7 @@ const services = [
   desc: "Got an outdated website? I'll modernise it - same content, better design, faster performance, and mobile-ready.",
   color: "var(--yellow)",
   from: "₹5,000",
+  image: "/webredesign.png"
 },
 ];
 
@@ -207,27 +213,35 @@ export default function WebsByVidya() {
           </p>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
-            {services.map(({ Icon, title, desc, color, from }) => (
+            {services.map(({ image, title, desc, color, from }) => (
               <div
                 key={title}
-                className="relative rounded-2xl border p-6 overflow-hidden flex flex-col transition-all duration-200 hover:-translate-y-1"
+                className="relative rounded-2xl border overflow-hidden flex flex-col transition-all duration-200 hover:-translate-y-1"
                 style={{ background: "var(--bg)", borderColor: "var(--border)" }}
               >
-                <div
-                  className="w-12 h-12 rounded-xl flex items-center justify-center mb-4 border"
-                  style={{ background: `${color}15`, borderColor: `${color}30` }}
-                >
-                  <Icon size={22} strokeWidth={1.8} style={{ color }} />
+                {/* Service image — top of card */}
+                <div className="h-50 overflow-hidden flex-shrink-0">
+                  <img
+                    src={image}
+                    alt={title}
+                    className="w-full h-full object-cover"
+                  />
                 </div>
-                <h3 className="text-base font-bold font-display mb-2" style={{ color: "var(--text)" }}>
-                  {title}
-                </h3>
-                <p className="text-sm leading-relaxed mb-4 flex-1" style={{ color: "var(--text2)" }}>
-                  {desc}
-                </p>
-                <p className="text-[11px] font-mono" style={{ color: "var(--text3)" }}>
-                  starting from <span className="font-bold" style={{ color }}>{from}</span>
-                </p>
+
+                {/* Content */}
+                <div className="p-5 flex flex-col flex-1">
+                  <h3 className="text-base font-bold font-display mb-2" style={{ color: "var(--text)" }}>
+                    {title}
+                  </h3>
+                  <p className="text-sm leading-relaxed mb-4 flex-1" style={{ color: "var(--text2)" }}>
+                    {desc}
+                  </p>
+                  <p className="text-[11px] font-mono" style={{ color: "var(--text3)" }}>
+                    starting from <span className="font-bold" style={{ color }}>{from}</span>
+                  </p>
+                </div>
+
+                {/* Bottom accent */}
                 <div className="absolute bottom-0 left-0 right-0 h-[3px]" style={{ background: color }} />
               </div>
             ))}
