@@ -12,6 +12,7 @@ import Contact from "./components/Contact";
 import Footer from "./components/Footer";
 import Admin from "./pages/Admin";
 import Projects from "./components/Projects";
+import WebsByVidya from "./pages/WebsByVidya";
 
 function Portfolio() {
   return (
@@ -36,6 +37,7 @@ export default function App() {
     <Routes>
       <Route path="/" element={<Portfolio />} />
       <Route path="/admin" element={<Admin />} />
+      <Route path="/webs-by-vidya" element={<WebsByVidya />} /> 
     </Routes>
   );
 }

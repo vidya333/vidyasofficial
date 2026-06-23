@@ -1,6 +1,6 @@
 import React from "react";
-import { Globe, Bot, Palette, LayoutTemplate, Server, ArrowRight } from "lucide-react";
-
+import { Globe, Bot, Palette, LayoutTemplate, Server, ArrowRight, RefreshCw } from "lucide-react";
+import {Link} from 'react-router-dom'
 const services = [
   {
     Icon: LayoutTemplate,
@@ -43,6 +43,14 @@ const services = [
     tags: ["VPS", "Vercel", "Cloudflare", "CI/CD"],
     from: "₹1,500/mo",
   },
+  {
+  Icon: RefreshCw,
+  title: "Website Redesign",
+  desc: "Got an outdated website? I'll modernise it — same content, better design, faster performance, and mobile-ready.",
+  color: "var(--yellow)",
+  tags: ["Redesign", "Performance", "Mobile-first", "SEO"],
+  from: "₹5,000",
+},
 ];
 
 export default function Services() {
@@ -124,13 +132,17 @@ export default function Services() {
           <p className="text-sm mb-4" style={{ color: "var(--text2)" }}>
             Not sure which service fits? Let's talk it through, no commitment needed.
           </p>
-          <button
-            className="btn-primary inline-flex items-center gap-2"
-            onClick={() => document.getElementById("contact")?.scrollIntoView({ behavior: "smooth" })}
-          >
-            Start a conversation
-            <ArrowRight size={15} strokeWidth={2} />
-          </button>
+          <Link
+  to="/webs-by-vidya"
+  className="inline-flex items-center gap-2 no-underline px-6 py-3 rounded-xl font-semibold text-sm transition-all duration-200 hover:scale-[1.02] hover:opacity-90"
+  style={{
+    background: "linear-gradient(135deg, var(--purple), var(--pink))",
+    color: "#fff",
+  }} 
+>
+  <Globe size={15} strokeWidth={2}  />
+  Visit Webs by Vidya
+</Link>
         </div>
 
       </div>
