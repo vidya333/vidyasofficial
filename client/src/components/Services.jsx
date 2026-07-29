@@ -5,7 +5,6 @@ const services = [
   {
     Icon: LayoutTemplate,
     title: "Landing Pages & Business Sites",
-    // Outcome first, tech second
     desc: "A professional website your customers can find, trust, and act on. Fast, mobile-first, and built to rank on Google.",
     color: "var(--orange)",
     tags: ["React", "Responsive", "SEO", "Performance"],

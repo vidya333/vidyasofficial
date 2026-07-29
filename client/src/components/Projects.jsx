@@ -12,6 +12,18 @@ import {
 const PROJECTS = [
   {
     id: 0,
+    title: "SkillSphere : Hyperlocal Freelance Marketplace",
+    description:
+      "A full-stack platform featuring real-time chat, AI skill-matching, and secure escrow payments using React, Redux Toolkit, Node.js, Express, MongoDB, and Socket.IO.",
+    image: "/skill-sphere.png",
+    tags: ["ReactJs", "ExpressJs", "NodeJs", "MongoDB", "NodeMailer", "RazorPay", "Escrow", "HuggingFace AI"],
+    link: "https://skillsphere-frontend-dtz9.onrender.com/",
+    github: "https://github.com/vidya333/skill-sphere",
+    date: "June 2026",
+    type: "personal",
+  },
+  {
+    id: 1,
     title: "SJ Coatings",
     description:
       "A full website for SJ Coatings - an industrial surface protection company. Built from scratch: branding, layout, product catalogue, project gallery, client testimonials, and a free-quote enquiry form. Demo is live on Render; going live once client data and assets are confirmed.",
@@ -25,7 +37,7 @@ const PROJECTS = [
     progressNote: "Demo live · Launching soon",
   },
   {
-    id: 1,
+    id: 2,
     title: "VM Prosperity Group",
     description:
       "A full-stack real estate platform built for a freelance client using the MERN stack. Independently handled requirement gathering, business understanding, UI design, development, database structure, admin functionality, deployment, and production delivery. Features property listings, filtering, detailed property pages, enquiry integration via WhatsApp/Email, brochure downloads, and an admin panel.",
@@ -37,7 +49,7 @@ const PROJECTS = [
     type: "client",
   },
   {
-    id: 2,
+    id: 3,
     title: "DevPulse",
     description:
       "A full-stack developer analytics dashboard with real-time GitHub profile insights and AI-powered personality analysis. Visualizes commit heatmaps, language analytics, streak tracking, top repositories, and intelligent personality verdicts (roast/praise mode). Built with React, Node.js/Express, GitHub API, and Groq AI.",
@@ -49,7 +61,7 @@ const PROJECTS = [
     type: "personal",
   },
   {
-    id: 3,
+    id: 4,
     title: "PrepWise",
     description:
       "An AI-powered interview preparation platform. Users upload PDFs or enter any topic to generate personalized interview questions, learning roadmaps, mindmaps, MCQ tests, and hands-on tasks. Multi-service architecture: React + TypeScript frontend, Node.js/Express backend, Python FastAPI for PDF parsing, Go for a high-performance MCQ engine, and Groq AI for content generation.",
@@ -61,7 +73,7 @@ const PROJECTS = [
     type: "personal",
   },
   {
-    id: 4,
+    id: 5,
     title: "Green Corner Advisory",
     description:
       "An advisory portal to evaluate, track, and optimize financial investments in renewable and sustainable energy sectors. Built completely from scratch using HTML, Bootstrap, CSS, and JavaScript as my first frontend project - developed tag-by-tag without templates to strengthen core fundamentals.",
@@ -73,7 +85,7 @@ const PROJECTS = [
     type: "personal",
   },
   {
-    id: 5,
+    id: 6,
     title: "Ketan Kids School Website",
     description:
       "A responsive school website built completely from scratch using HTML, Bootstrap, CSS, and JavaScript. Developed section-by-section without frameworks or AI tools. Strengthened understanding of component-based UI thinking, responsive web design, Bootstrap grid, and interactive frontend behavior.",
@@ -85,7 +97,7 @@ const PROJECTS = [
     type: "personal",
   },
   {
-    id: 6,
+    id: 7,
     title: "BCSA Website",
     description:
       "A responsive frontend website for BCSA, built from scratch with HTML, Bootstrap, CSS, and JavaScript. Focused on structured layouts, responsive design, clean UI sections, and interactive frontend behavior.",
@@ -97,7 +109,7 @@ const PROJECTS = [
     type: "personal",
   },
   {
-    id: 7,
+    id: 8,
     title: "Scrolling Page Animation",
     description:
       "Smooth, interactive scroll-triggered animations built with HTML, CSS, and vanilla JavaScript - no external libraries. Completed within 24 hours as an ATG World internship assignment. Challenged problem-solving, DOM manipulation, animation logic, SVG, and rapid execution under deadlines.",
@@ -108,6 +120,7 @@ const PROJECTS = [
     date: "June 2024",
     type: "personal",
   },
+  
 ];
 
 const TABS = ["All", "Client Work", "Personal"];

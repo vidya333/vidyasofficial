@@ -73,14 +73,14 @@ export default function Navbar() {
           {/* Resume — desktop only */}
           {!isMobile && (
             <a
-              href="https://drive.google.com/file/d/1m5kwW99zgOIpcmqko3vfcSRo0z3Gk3Qe/view"
+              href="https://drive.google.com/file/d/1Qz8xMVZZmRY-TUv7l_4AY8RDKmLjRflV/view?usp=drive_link"
               download target="blank"
               className="flex items-center gap-1.5 px-4 py-2 rounded-lg text-white text-[13px]
                 font-bold no-underline font-display
                 bg-gradient-to-br from-[var(--purple)] to-[var(--pink)]
                 hover:opacity-90 hover:-translate-y-0.5 transition-all duration-200"
             >
-              <Download size={13} strokeWidth={2} />
+              {/* <Download size={13} strokeWidth={2} /> */}
               Resume
             </a>
           )}
