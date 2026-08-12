@@ -345,29 +345,34 @@ export default function WebsByVidya() {
         <div className="container px-5 md:px-6">
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
 
-            {/* Pamphlet - real image + download */}
+            {/* Pamphlet - Google Drive Direct Link */}
             <div
-              className="rounded-2xl border overflow-hidden flex flex-col"
+              className="rounded-2xl border overflow-hidden flex flex-col justify-between"
               style={{ background: "var(--bg)", borderColor: "var(--border)" }}
             >
-              <img
-                src="/header.png"
-                alt="Webs by Vidya Service Brochure"
-                className="w-full object-cover"
-                style={{ maxHeight: "320px", objectPosition: "top" }}
-              />
-              <div className="p-4 flex items-center justify-between gap-3">
+              <div className="relative overflow-hidden group">
+                <img
+                  src="/header.png"
+                  alt="Webs by Vidya Service Brochure"
+                  className="w-full object-cover transition-transform duration-300 group-hover:scale-105"
+                  style={{ maxHeight: "220px", objectPosition: "top" }}
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-[var(--bg)] via-transparent to-transparent opacity-80" />
+              </div>
+              
+              <div className="p-4 flex items-center justify-between gap-3 mt-auto">
                 <div>
                   <p className="text-sm font-bold font-display" style={{ color: "var(--text)" }}>
-                    Service Brochure
+                    Official Service Guide
                   </p>
                   <p className="text-[11px] font-mono" style={{ color: "var(--text3)" }}>
-                    Webs by Vidya · Professional Websites
+                    Packages from ₹4,999 · Webs by Vidya
                   </p>
                 </div>
                 <a
-                  href="/Untitled_design.png"
-                  download="WebsByVidya-Brochure.png"
+                  href="https://drive.google.com/file/d/1onzMNSKArcDoSfmVov-WI1VGh7OS362j/preview"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="inline-flex items-center gap-1.5 px-4 py-2 rounded-xl text-xs font-semibold no-underline transition-all hover:opacity-85 flex-shrink-0"
                   style={{
                     background: "linear-gradient(135deg, var(--purple), var(--pink))",
@@ -375,7 +380,7 @@ export default function WebsByVidya() {
                   }}
                 >
                   <FileText size={13} strokeWidth={2} />
-                  Download
+                  View Brochure
                 </a>
               </div>
             </div>
@@ -413,7 +418,6 @@ export default function WebsByVidya() {
           </div>
         </div>
       </section>
-
       {/* ── CONTACT / FORM ── */}
       <section id="biz-contact" className="py-24">
         <div className="container px-5 md:px-6">
