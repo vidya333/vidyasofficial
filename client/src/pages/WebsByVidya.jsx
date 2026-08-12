@@ -169,7 +169,7 @@ export default function WebsByVidya() {
 
               <p className="text-base md:text-lg leading-relaxed mb-8 max-w-lg" style={{ color: "var(--text2)" }}>
                  Full Stack Developer Based in Pune · I design, build, and host websites that help your business get found online -
-                fast, affordable, and with zero technical headache for you. Fill out the form below & let’s grab a coffee and let’s discuss how to grow together.
+                fast, affordable, and with zero technical headache for you. Fill out the form below & let’s grab a coffee and discuss how to grow together.
               </p>
 
               <div className="flex flex-wrap gap-3 mb-10">
