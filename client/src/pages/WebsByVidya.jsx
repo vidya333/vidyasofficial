@@ -6,6 +6,7 @@ import {
   Camera, FileText, MessageCircle, Zap, PackageCheck,
   Headphones, Star,RefreshCw
 } from "lucide-react";
+import RadarIllustration from "../components/RadarIllustration";
 
 const FORM_EMBED =
   "https://docs.google.com/forms/d/e/1FAIpQLScQ53LKLqkZFzFLnpZ098f_DCBlkOHbnaHplPA5CKab8TeiBg/viewform?embedded=true";
@@ -189,14 +190,11 @@ export default function WebsByVidya() {
               </div>
             </div>
 
-            {/* Right - banner image */}
-            <div className="hidden lg:flex items-center justify-center">
-              <img
-                src="/pamphlete.png"
-                alt="Webs by Vidya - Professional Websites for Local Businesses"
-                className="w-full max-w-xl rounded-2xl"
-                style={{ objectFit: "contain" ,maxHeight:"600px"}}
-              />
+            {/* Right - banner image / radar */}
+            <div className="flex items-center justify-center w-full mt-8 lg:mt-0">
+              <div className="w-full max-w-[280px] sm:max-w-sm md:max-w-md">
+                <RadarIllustration />
+              </div>
             </div>
 
           </div>
