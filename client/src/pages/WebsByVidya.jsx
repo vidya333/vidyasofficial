@@ -154,7 +154,7 @@ export default function WebsByVidya() {
                 style={{ background: "rgba(155,89,255,0.1)", borderColor: "rgba(155,89,255,0.3)", color: "var(--purple)" }}
               >
                 <span className="w-2 h-2 rounded-full animate-pulse" style={{ background: "var(--green)" }} />
-                Free consultation · No commitment
+               Meet Over Coffee · Scale Your Brand
               </div>
 
               <h1
@@ -164,12 +164,12 @@ export default function WebsByVidya() {
                 <span className="block font-mono font-normal text-[0.3em] mb-2" style={{ color: "var(--text2)" }}>
                   professional websites for
                 </span>
-                <span className="gradient-text">Local Businesses</span>
+                <span className="gradient-text">Growing Businesses</span>
               </h1>
 
               <p className="text-base md:text-lg leading-relaxed mb-8 max-w-lg" style={{ color: "var(--text2)" }}>
-                Based in Pune · I design, build, and host websites that help your business get found online -
-                fast, affordable, and with zero technical headache for you.
+                 Full Stack Developer Based in Pune · I design, build, and host websites that help your business get found online -
+                fast, affordable, and with zero technical headache for you. Fill out the form below & let’s grab a coffee and let’s discuss how to grow together.
               </p>
 
               <div className="flex flex-wrap gap-3 mb-10">

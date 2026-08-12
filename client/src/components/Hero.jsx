@@ -207,8 +207,7 @@ export default function Hero() {
           className="text-base md:text-lg leading-relaxed max-w-xl mb-9"
           style={{ color: "var(--text2)" }}
         >
-          Based in Pune · I design, build, and host websites for businesses -
-          from landing pages to full-stack apps. Clean code, clear timelines, no jargon.
+         I specialize in turning complex problems into smooth, production-ready digital products. From pixel-perfect frontends to robust API systems, I love building tech that works seamlessly. Let’s meet over coffee and chat growth and engineering.
         </p>
 
         {/* Dual CTAs — business path + portfolio path */}
