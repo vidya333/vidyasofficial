@@ -13,6 +13,9 @@ import Footer from "./components/Footer";
 import Admin from "./pages/Admin";
 import Projects from "./components/Projects";
 import WebsByVidya from "./pages/WebsByVidya";
+import VisualArt from "./pages/VisualArt";
+import Blogs from "./pages/Blogs";
+import SkillsDashboard from "./components/SkillsDashboard";
 
 function Portfolio() {
   return (
@@ -22,9 +25,10 @@ function Portfolio() {
       <About />
       <Journey />
       <Projects/>
+      <SkillsDashboard/>
       <GitHubStats />
-      <Services />
-      <Testimonials />
+      {/* <Services /> */}
+      {/* <Testimonials /> */}
       <Life />
       <Contact />
       <Footer />
@@ -38,6 +42,8 @@ export default function App() {
       <Route path="/" element={<Portfolio />} />
       <Route path="/admin" element={<Admin />} />
       <Route path="/webs-by-vidya" element={<WebsByVidya />} /> 
+      <Route path="/visual-art" element={<VisualArt/>} />
+      <Route path="/blogs" element={<Blogs/>} />
     </Routes>
   );
 }

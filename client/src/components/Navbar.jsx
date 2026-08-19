@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { useTheme } from "../context/ThemeContext";
 import { Sun, Moon, Menu, X, Download } from "lucide-react";
 
-const links = ["About", "Journey", "Services", "Life", "Contact"];
+const links = ["About", "Journey", "Skills", "Life", "Contact"];
 
 export default function Navbar() {
   const { dark, toggle } = useTheme();
@@ -80,7 +80,6 @@ export default function Navbar() {
                 bg-gradient-to-br from-[var(--purple)] to-[var(--pink)]
                 hover:opacity-90 hover:-translate-y-0.5 transition-all duration-200"
             >
-              {/* <Download size={13} strokeWidth={2} /> */}
               Resume
             </a>
           )}

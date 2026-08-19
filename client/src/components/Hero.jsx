@@ -14,6 +14,7 @@ const socials = [
   { label: "Twitter", url: "https://twitter.com/vidya_tandel" },
   { label: "Instagram", url: "https://instagram.com/vidyasofficiall" },
   { label: "GitHub", url: "https://github.com/vidya333" },
+  { label: "Blogs", url: "https://medium.com/@vidyatandel" },
 ];
 
 export default function Hero() {

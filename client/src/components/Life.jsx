@@ -8,8 +8,17 @@ const interests = [
     desc: "I create digital and traditional art. Drawing is how I process the world - every sketch is a thought made visible.",
     color: "var(--pink)",
     items: ["Digital illustration", "Sketching", "Color theory", "Visual storytelling"],
-    link: "https://www.instagram.com/the.magic.palette.studio/",
+    link: "/visual-art",
     linkLabel: "See my art",
+  },
+  {
+    Icon: PenLine,
+    title: "Writing",
+    desc: "I write about tech, emotions, creativity, the human mind - and a lot more.",
+    color: "var(--cyan)",
+    items: ["Tech blogging", "Medium stories", "Developer diaries", "Lessons learned"],
+    link: "/blogs",
+    linkLabel: "Read Essays",
   },
   {
     Icon: Music,
@@ -20,15 +29,7 @@ const interests = [
     link: "https://youtube.com/@vidyasofficial?si=yVZLmCERwmnDrSRp",
     linkLabel: "Watch me play",
   },
-  {
-    Icon: PenLine,
-    title: "Writing",
-    desc: "I write about tech, emotions, creativity, the human mind - and a lot more.",
-    color: "var(--cyan)",
-    items: ["Tech blogging", "Medium stories", "Developer diaries", "Lessons learned"],
-    link: "https://medium.com/@vidyatandel",
-    linkLabel: "Read on Medium",
-  },
+  
   {
     Icon: BookOpen,
     title: "Continuous Learning",
@@ -42,7 +43,7 @@ const interests = [
     desc: "I volunteer with Divine Harmony - a Pune-based spiritual wellbeing program by Shreekalp.",
     color: "var(--pink)",
     items: ["Divine Harmony", "Shreekalp", "Wellbeing"],
-    link: "https://www.shreekalp.online/",
+    link: "https://www.divineharmony.co.in/",
     linkLabel: "Visit Shreekalp",
   },
 ];
@@ -162,7 +163,7 @@ export default function Life() {
                 {link && (
                   <a
                     href={link}
-                    target="_blank"
+                    target="_self"
                     rel="noreferrer"
                     className="inline-flex items-center gap-1.5 text-[12px] font-semibold font-mono no-underline mt-auto transition-opacity duration-200 hover:opacity-70"
                     style={{ color }}
