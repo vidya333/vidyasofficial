@@ -16,6 +16,7 @@ import WebsByVidya from "./pages/WebsByVidya";
 import VisualArt from "./pages/VisualArt";
 import Blogs from "./pages/Blogs";
 import SkillsDashboard from "./components/SkillsDashboard";
+import AestheticClicks from "./pages/AestheticClicks";
 
 function Portfolio() {
   return (
@@ -44,6 +45,7 @@ export default function App() {
       <Route path="/webs-by-vidya" element={<WebsByVidya />} /> 
       <Route path="/visual-art" element={<VisualArt/>} />
       <Route path="/blogs" element={<Blogs/>} />
+      <Route path="/aesthetic-clicks" element={<AestheticClicks/>} />
     </Routes>
   );
 }

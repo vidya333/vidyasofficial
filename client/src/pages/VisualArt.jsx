@@ -196,7 +196,7 @@ export default function VisualArt() {
           {instagramArtworks.map((item) => (
             <div
               key={item.id}
-              className="break-inside-avoid relative group rounded-2xl overflow-hidden border border-white/10 bg-[#121212] transition-all duration-300 hover:shadow-2xl hover:border-pink-500/40"
+              className="break-inside-avoid relative group rounded-2xl overflow-hidden border-[6px] border-white bg-[#121212] shadow-xl shadow-black/60 cursor-pointer transition-all duration-300 hover:shadow-2xl hover:shadow-black/90 hover:-translate-y-1"
             >
               {/* Natural Aspect Ratio Image */}
               <img

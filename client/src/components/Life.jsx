@@ -1,5 +1,5 @@
 import React, { useRef } from "react";
-import { Brush, Music, PenLine, BookOpen, ExternalLink, ChevronLeft, ChevronRight, Heart } from "lucide-react";
+import { Brush, Music, PenLine, Camera, ExternalLink, ChevronLeft, ChevronRight, Heart } from "lucide-react";
 
 const interests = [
   {
@@ -29,13 +29,14 @@ const interests = [
     link: "https://youtube.com/@vidyasofficial?si=yVZLmCERwmnDrSRp",
     linkLabel: "Watch me play",
   },
-  
   {
-    Icon: BookOpen,
-    title: "Continuous Learning",
-    desc: "Curiosity drives me to read, experiment, and explore - whether it's a new framework, philosophy, or art style.",
+    Icon: Camera,
+    title: "Aesthetic Clicks",
+    desc: "Everyday perspectives captured through a phone lens - finding art in light, shadows, and fleeting moments.",
     color: "var(--orange)",
-    items: ["Tech research", "New languages", "Design trends", "AI exploration"],
+    items: ["Mobile photography", "Moodboards", "Street shots", "Color studies"],
+    link: "/aesthetic-clicks",
+    linkLabel: "View Clicks",
   },
   {
     Icon: Heart,
